@@ -3,17 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Console</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <title>IPRegistry Console</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/ipregistry-logo.png">
+
+    <script src="src/index.js" defer></script>
 </head>
 <body>
     <section class="heading">
         <header>
             <div class="logo">
-                <img src="assets/ipregistry-logo.png">
+                <img src="assets/ipregistry-logo.png" alt="IPRegistry Logo">
             </div>
+            <div class="title">
+                <p>
+                    <b>IP Address Management Console for IT Infrastructure Teams</b>
+                </p>
+            </div>
+            <nav>
+                <h1 id="login">
+                    <a href="index.html"><b>Home</b></a>
+                </h1>
+                <h1 id="login">
+                    <a href="login.html"><b>Login</b></a>
+                </h1>
+                <h1>
+                    <a href="insert-ipv4.html"><b>Insert IPv4</b></a>
+                </h1>
+                <h1>
+                    <a href="search-ipv4.html"><b>Search IPv4</b></a>
+                </h1>
+                <h1>
+                    <a href="update-ipv4.html"><b>Update IPv4</b></a>
+                </h1>
+                <h1>
+                    <a href="delete-ipv4.html"><b>Delete IPv4</b></a>
+                </h1>
+            </nav>
         </header>
     </section>
+    <main>
+        <section class="about">
+            <div class="main-heading">
+                <div class="main-logo">
+                    <img src="assets/ipregistry-logo.png" alt="IPRegistry Logo">
+                </div>
+                <div class="main-title">
+                    <h2>IPRegistry IPAM Software</h2>
+                </div>
+            </div>
+            <div class="main-text">
+                <p>
+                    IPAM (IP Address Management) is a software solution for
+                    managing, organizing, and monitoring IP addresses across
+                    a network. It helps track IP availability, prevent address
+                    conflicts, and maintain an organized inventory of IPv4 and
+                    IPv6 addresses.
+                </p>
+            </div>
+            <div class="subnets">
+                <div class="subnet-title">
+                    <h3>Subnets</h3>
+                </div>
+                <div class="subnet-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="4">Subnet Management</th>
+                            </tr>
+                            <tr>
+                                <th>Environment</th>
+                                <th>Subnet</th>
+                                <th>Network Address</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Production</td>
+                                <td>prod-subnet</td>
+                                <td>10.0.1.0/24</td>
+                                <td id="status-prod">enabled</td>
+                            </tr>
+                            <tr>
+                                <td>Development</td>
+                                <td>dev-subnet</td>
+                                <td>10.0.2.0/24</td>
+                                <td id="status-dev">enabled</td>
+                            </tr>
+                            <tr>
+                                <td>Corporate</td>
+                                <td>corp-subnet</td>
+                                <td>10.0.3.0/24</td>
+                                <td id="status-corp">disabled</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
