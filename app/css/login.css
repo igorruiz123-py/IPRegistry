@@ -149,6 +149,207 @@ main {
     font-size: 3vmin;
 }
 
+.main-form {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: min(440px, calc(100% - 32px));
+    height: auto;
+    margin: 70px auto;
+    background-color: #1c2128;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Login heading */
+
+.main-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    min-height: 105px;
+    padding: 20px;
+    border-bottom: 1px solid #30363d;
+}
+
+.main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+}
+
+.main-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0;
+}
+
+.main-title h1 {
+    color: #f0f6fc;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Form container */
+
+.main-form {
+    width: 100%;
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+    width: 100%;
+    height: auto;
+}
+
+form label {
+    display: block;
+    color: #f0f6fc;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: -12px;
+}
+
+form label p {
+    color: #8b949e;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+/* Input fields */
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 7px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.icon i {
+    width: 16px;
+    color: #8b949e;
+    font-size: 15px;
+    text-align: center;
+}
+
+.icon input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    color: #f0f6fc;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.icon input::placeholder {
+    color: #6e7681;
+}
+
+.icon:focus-within {
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+.icon:focus-within i {
+    color: #58a6ff;
+}
+
+/* Access button */
+
+form button {
+    width: 100%;
+    height: 46px;
+    margin-top: 4px;
+    color: #ffffff;
+    background-color: #238636;
+    border: 1px solid rgba(240, 246, 252, 0.1);
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #2ea043;
+}
+
+form button:active {
+    transform: scale(0.99);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .login {
+        margin: 40px auto;
+        border-radius: 10px;
+    }
+
+    .main-heading {
+        min-height: 90px;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .main-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main-title h1 {
+        font-size: 16px;
+    }
+
+    .main-form {
+        padding: 24px 20px;
+    }
+
+    form {
+        gap: 20px;
+    }
+}
+
+
 @media (max-width: 1023px) {
 
     .heading header {
